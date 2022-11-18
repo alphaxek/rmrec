@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const os = require("os");
-const { exec } = require('node:child_process');
+const { exec } = require('child_process');
 const [,, ...args] = process.argv;
 
 const osVersion = os.version();
