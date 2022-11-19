@@ -3,6 +3,8 @@ name: "🚀 publish"
 on:
   release:
     types: [published,created,edited,prereleased,released]
+    with:
+      token: ${{ secrets.PAT }}
 
 jobs:
     release:
@@ -16,7 +18,6 @@ jobs:
               with:
                   node-version: 18
                   registry-url: https://registry.npmjs.org
-                  token: ${{ secrets.PAT }}
             - name: 🚀 publish
               run: npm publish --access public
               env:
