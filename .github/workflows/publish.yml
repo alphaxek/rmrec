@@ -1,8 +1,8 @@
 name: "🚀 publish"
 
 on:
-    release:
-      types: [Latest]
+  release:
+    types: [released]
 
 jobs:
     release:
