@@ -8,6 +8,7 @@ console.log(`Deleting ${args}`);
   
 (async function main() {
     try {
+        //Remove directory
         fsPromises.rm(args[0], { recursive: true, force: true });
     } catch (err) {
         //Log error
