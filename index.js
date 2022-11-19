@@ -1,33 +1,17 @@
 #!/usr/bin/env node
 
-const os = require("os");
-const { exec } = require('child_process');
+const fsPromises = require('fs').promises;
 const [,, ...args] = process.argv;
 
-const osVersion = os.version();
-
-console.log(args);
+//Log progress
+console.log(`Deleting ${args}`);
   
-if (osVersion.includes("Windows")){
-    exec(`rd /s /q "${args[0]}"`, (err, res) => {
-        //Callback function will be called after command execution
-        if (err) {
-            //Log error
-            console.error("delete command could not be executed : ", err)
-            return
-        }
-        //Log response
-        console.log("Deleted \n", res)
-    })
-}else{
-    exec(`rm -rf "${args[0]}"`, (err, res) => {
-        //Callback function will be called after command execution
-        if (err) {
-            //Log error
-            console.error("delete command could not be executed : ", err)
-            return
-        }
-        //Log response
-        console.log("Deleted \n", res)
-    })
-}
+(async function main() {
+    try {
+        fsPromises.rm(args[0], { recursive: true, force: true });
+    } catch (err) {
+        //Log error
+        console.error("delete command could not be executed : ", err);
+        return
+    }
+})();
