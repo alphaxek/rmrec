@@ -11,7 +11,7 @@ console.log(`Deleting ${args}`);
         fsPromises.rm(args[0], { recursive: true, force: true });
     } catch (err) {
         //Log error
-        console.error("delete command could not be executed : ", err);
+        console.error("Delete command could not be executed : ", err);
         return
     }
 })();
