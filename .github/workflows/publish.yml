@@ -2,7 +2,7 @@ name: "🚀 publish"
 
 on:
     release:
-      types: [published]
+      types: [Latest]
 
 jobs:
     release:
