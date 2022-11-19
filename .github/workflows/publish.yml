@@ -2,8 +2,7 @@ name: "🚀 publish"
 
 on:
     release:
-        branches:
-          - main
+      types: [published]
 
 jobs:
     release:
