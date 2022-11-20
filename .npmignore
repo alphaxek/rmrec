@@ -1,2 +1,5 @@
 #workflows
 .github
+
+#tests
+__tests__
