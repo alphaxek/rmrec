@@ -1,9 +1,0 @@
-#workflows
-.github
-
-#tests
-__tests__
-coverage
-
-#others
-pnpm-lock.yaml
