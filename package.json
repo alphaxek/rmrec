@@ -10,7 +10,7 @@
   },
   "scripts": {
     "test": "copyfiles ./__tests__/test-data ./__tests__/to-be-deleted-test-data && node ./index.js ./__tests__/to-be-deleted-test-data && jest ./__tests__/index.test.js",
-    "build" : "copyfiles ./index.js ./dist/ && copyfiles ./README.md ./dist/"
+    "build" : "copyfiles ./index.js ./dist/rmrec/ && copyfiles ./README.md ./dist/rmrec/"
   },
   "repository": "git://github.com/alphaxek/rmrec.git",
   "devDependencies": {
