@@ -1,0 +1,17 @@
+{
+  "name": "rmrec",
+  "version": "1.2.0",
+  "description": "Runs a native command `rd` or `rf` based on OS by creating & running a child process to delete a folder recursively.",
+  "main": "index.js",
+  "author": "Alpha Xek @alphaxek",
+  "license": "ISC",
+  "scripts": {
+    "copy-test-data" : "copyfiles ./test-data/txt/test-data.txt ./to-be-deleted-test-data && copyfiles ./test-data/xml/test-data.xml ./to-be-deleted-test-data ",
+    "test": "pnpm run copy-test-data && node ./../index.js ./to-be-deleted-test-data && jest ./index.test.js"
+  },
+  "repository": "git://github.com/alphaxek/rmrec.git",
+  "devDependencies": {
+    "jest": "^29.3.1",
+    "copyfiles": "^2.4.1"
+  }
+}
