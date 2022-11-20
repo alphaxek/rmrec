@@ -1,5 +1,5 @@
 {
-    "name": "rmrec",
+    "name": "rmrec2",
     "version": "1.0.0",
     "description": "Runs a native command `rd` or `rf` based on OS by creating & running a child process to delete a folder recursively.",
     "main": "index.js",
