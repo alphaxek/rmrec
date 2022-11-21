@@ -19,8 +19,9 @@ jobs:
               uses: pnpm/action-setup@v2.2.4
               with:
                 version: 7
-                path: ${{ github.workspace }}
             - name: 📝 tests
               run: npm test
+              with:
+                path: ${{ github.workspace }}
               env:
                   NODE_AUTH_TOKEN: ${{secrets.PAT}}
