@@ -16,8 +16,8 @@ jobs:
               with:
                   node-version: 18
             - name: 📝 tests
-              run: npm test
               with:
                 path: ${{ github.workspace }}
+              run: npm test
               env:
                   NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
