@@ -1,0 +1,15 @@
+name: "📝 tests"
+
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+    run-tests:
+        runs-on: ubuntu-latest
+        steps:
+            - name: 📚 checkout
+              uses: actions/checkout@v2.5.0
+            - name: 📝 tests
+              run: npm test
