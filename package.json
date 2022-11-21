@@ -15,6 +15,7 @@
   "repository": "git://github.com/alphaxek/rmrec.git",
   "devDependencies": {
     "jest": "^29.3.1",
-    "copyfiles": "^2.4.1"
+    "copyfiles": "^2.4.1",
+    "rmrec": "^1.2.3"
   }
 }
