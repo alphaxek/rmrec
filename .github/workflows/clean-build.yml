@@ -1,4 +1,4 @@
-name: "🛠️ build"
+name: "🧹 clean & 🛠️ build"
 
 on: 
   push:
@@ -15,7 +15,7 @@ jobs:
           uses: actions/setup-node@v3.5.1
           with:
               node-version: 18
-        - name: 📦 clean
+        - name: 🧹 clean
           run: |
             sudo node ./dist/rmrec/index.js ./node_modules
   build:
