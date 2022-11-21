@@ -3,12 +3,10 @@ lockfileVersion: 5.4
 specifiers:
   copyfiles: ^2.4.1
   jest: ^29.3.1
-  rmrec: ^1.2.3
 
 devDependencies:
   copyfiles: 2.4.1
   jest: 29.3.1
-  rmrec: 1.2.3
 
 packages:
 
@@ -2064,11 +2062,6 @@ packages:
       is-core-module: 2.11.0
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
-    dev: true
-
-  /rmrec/1.2.3:
-    resolution: {integrity: sha512-yAuYpmXeYsdm8qGRPA2hMesxj7WmWJdDcWVgPUTd5Vlj7T42mvcOprf6P2DZcjtFYikjADtdzsBDmHVG2AYJ5Q==}
-    hasBin: true
     dev: true
 
   /safe-buffer/5.1.2:
