@@ -11,5 +11,8 @@ jobs:
         steps:
             - name: 📚 checkout
               uses: actions/checkout@v2.5.0
-            - name: 📝 tests
+            - name: 🟢 node
+              uses: actions/setup-node@v3.5.1
+              with:
+                  node-version: 18
               run: npm test
