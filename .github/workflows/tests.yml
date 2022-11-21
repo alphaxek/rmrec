@@ -15,4 +15,5 @@ jobs:
               uses: actions/setup-node@v3.5.1
               with:
                   node-version: 18
-                  test: npm test
+            - name: 📝 tests
+              run: npm test
