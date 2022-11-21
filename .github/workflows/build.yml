@@ -15,5 +15,9 @@ jobs:
           uses: actions/setup-node@v3.5.1
           with:
               node-version: 18
+        - name: 📦 pnpm
+            uses: pnpm/action-setup@v2.2.4
+            with:
+              version: 7
         - name: 🛠️ build
           run: pnpm build
