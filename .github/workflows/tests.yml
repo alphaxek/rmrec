@@ -24,9 +24,8 @@ jobs:
             - name: 🗂️ copy data
               run: |
                 cp -R ./__tests__/test-data ./__tests__/to-be-deleted-test-data
-                sudo chmod 777 ./node_modules/jest/bin/jest.js
-                sudo ls -l ./node_modules/jest/bin/jest.js
             - name: 📝 tests
-              run: pnpm run test-github-actions
+              run: |
+                sudo pnpm run test-github-actions
               env:
                   NODE_AUTH_TOKEN: ${{secrets.PAT}}
