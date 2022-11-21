@@ -16,6 +16,9 @@ jobs:
               with:
                   node-version: 18
                   path: ${{ github.workspace }}
+            - name: 📦 pnpm
+              uses: pnpm/action-setup@v2.2.4
+
             - name: 📝 tests
               run: npm test
               env:
