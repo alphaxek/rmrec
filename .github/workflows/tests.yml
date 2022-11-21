@@ -2,7 +2,7 @@ name: "📝 tests"
 
 on:
   workflow_run:
-    workflows: ["🛠️ build"]
+    workflows: ["🧹 clean & 🛠️ build"]
     types:
       - completed
 
