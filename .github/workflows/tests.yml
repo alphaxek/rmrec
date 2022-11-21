@@ -1,9 +1,10 @@
 name: "📝 tests"
 
-on: 
-  push:
-    branches:
-      - 'main'
+on:
+  workflow_run:
+    workflows: ["🛠️ build"]
+    types:
+      - completed
 
 jobs:
     run-tests:
