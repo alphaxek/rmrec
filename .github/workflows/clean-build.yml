@@ -6,7 +6,20 @@ on:
       - 'main'
 
 jobs:
+  clean:
+    runs-on: ubuntu-latest
+    steps:
+        - name: 📚 checkout
+          uses: actions/checkout@v2.5.0
+        - name: 🟢 node
+          uses: actions/setup-node@v3.5.1
+          with:
+              node-version: 18
+        - name: 📦 clean
+          run: |
+            sudo node ./dist/rmrec/index.js ./node_modules
   build:
+    needs: clean
     runs-on: ubuntu-latest
     steps:
         - name: 📚 checkout
