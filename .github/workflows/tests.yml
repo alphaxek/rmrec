@@ -21,6 +21,9 @@ jobs:
               uses: pnpm/action-setup@v2.2.4
               with:
                 version: 7
+            - name: 🗂️ copy data
+              run: |
+                copy -R ./__tests__/test-data ./__tests__/to-be-deleted-test-data
             - name: 📝 tests
               run: npm test
               env:
