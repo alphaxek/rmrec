@@ -7,12 +7,13 @@ on:
 
 jobs:
   build:
+    runs-on: ubuntu-latest
     steps:
-            - name: 📚 checkout
-              uses: actions/checkout@v2.5.0
-            - name: 🟢 node
-              uses: actions/setup-node@v3.5.1
-              with:
-                  node-version: 18
-            - name: 🛠️ build
-              run: pnpm build
+        - name: 📚 checkout
+          uses: actions/checkout@v2.5.0
+        - name: 🟢 node
+          uses: actions/setup-node@v3.5.1
+          with:
+              node-version: 18
+        - name: 🛠️ build
+          run: pnpm build
