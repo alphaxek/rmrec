@@ -8,6 +8,8 @@ on:
 jobs:
     run-tests:
         runs-on: ubuntu-latest
+        permissions:
+          repository-projects: read|write
         steps:
             - name: 📚 checkout
               uses: actions/checkout@v2.5.0
@@ -21,7 +23,5 @@ jobs:
                 version: 7
             - name: 📝 tests
               run: npm test
-              with:
-                path: ${{ github.workspace }}
               env:
                   NODE_AUTH_TOKEN: ${{secrets.PAT}}
