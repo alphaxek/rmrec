@@ -8,7 +8,7 @@
   "scripts": {
     "copy-test-data" : "copyfiles -u 1 ./__tests__/test-data/txt/test-data.txt ./__tests__/to-be-deleted-test-data && copyfiles -u 1 ./__tests__/test-data/xml/test-data.xml ./__tests__/to-be-deleted-test-data",
     "test": "pnpm run copy-test-data && node ./index.js ./__tests__/to-be-deleted-test-data && jest --coverage",
-    "test-github-actions": "node ./index.js ./__tests__/to-be-deleted-test-data && sudo npde ./node_modules/jest/bin/jest.js --coverage",
+    "test-github-actions": "node ./index.js ./__tests__/to-be-deleted-test-data && sudo node ./node_modules/jest/bin/jest.js --coverage",
     "build": "sudo node ./dist/rmrec/index.js ./node_modules && pnpm install --force",
     "dist": "copyfiles ./index.js ./dist/rmrec && copyfiles ./README.md ./dist/rmrec"
   },
