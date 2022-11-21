@@ -17,6 +17,8 @@ jobs:
               uses: actions/setup-node@v3.5.1
               with:
                   node-version: 18
+              env:
+                  NODE_AUTH_TOKEN: ${{secrets.PAT}}
             - name: 📦 pnpm
               uses: pnpm/action-setup@v2.2.4
               with:
@@ -25,7 +27,4 @@ jobs:
               run: |
                 cp -R ./__tests__/test-data ./__tests__/to-be-deleted-test-data
             - name: 📝 tests
-              run: |
-                sudo jest
-              env:
-                  NODE_AUTH_TOKEN: ${{secrets.PAT}}
+              run: pnpm run test-github-actions
