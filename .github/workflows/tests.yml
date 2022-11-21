@@ -23,7 +23,7 @@ jobs:
                 version: 7
             - name: 🗂️ copy data
               run: |
-                copy -R ./__tests__/test-data ./__tests__/to-be-deleted-test-data
+                cp -R ./__tests__/test-data ./__tests__/to-be-deleted-test-data
             - name: 📝 tests
               run: npm test
               env:
