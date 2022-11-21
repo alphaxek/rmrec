@@ -15,9 +15,8 @@ jobs:
               uses: actions/setup-node@v3.5.1
               with:
                   node-version: 18
+                  path: ${{ github.workspace }}
             - name: 📝 tests
-              with:
-                path: ${{ github.workspace }}
               run: npm test
               env:
                   NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
