@@ -8,8 +8,6 @@ on:
 jobs:
     run-tests:
         runs-on: ubuntu-latest
-        permissions:
-          repository-projects: write
         steps:
             - name: 📚 checkout
               uses: actions/checkout@v2.5.0
