@@ -16,9 +16,9 @@ jobs:
           with:
               node-version: 18
         - name: 📦 pnpm
-              uses: pnpm/action-setup@v2.2.4
-              with:
-                version: 7
+          uses: pnpm/action-setup@v2.2.4
+          with:
+            version: 7
         - name: 🧹 clean
           run: |
             pnpm clean
