@@ -13,9 +13,9 @@ jobs:
             - name: 📚 checkout
               uses: actions/checkout@v2.5.0
             - name: 🟢 node
-            uses: actions/setup-node@v3.5.1
-            with:
-                node-version: 18
+              uses: actions/setup-node@v3.5.1
+              with:
+                  node-version: 18
             - name: 📦 pnpm
               uses: pnpm/action-setup@v2.2.4
               with:
