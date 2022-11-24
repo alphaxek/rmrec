@@ -27,5 +27,7 @@ jobs:
                 pwd
                 ls -l
                 echo "test"
+                read a
+                echo a
             - name: 📝 tests
               run: pnpm run test
