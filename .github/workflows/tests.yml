@@ -24,5 +24,7 @@ jobs:
               run: |
                 chmod 777 node_modules/.bin/jest
                 chmod 777 node_modules/.bin/copyfiles
+                pwd
+                echo "test"
             - name: 📝 tests
               run: pnpm run test
