@@ -21,5 +21,7 @@ jobs:
                 cp -R ./__tests__/test-data ./__tests__/to-be-deleted-test-data
                 chmod 777 __tests__
                 chmod 777 node_modules
+                cd node_modules/.bin
+                ls -l
             - name: 📝 tests
               run: pnpm run test-github-actions
