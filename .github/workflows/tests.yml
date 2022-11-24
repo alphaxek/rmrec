@@ -22,10 +22,7 @@ jobs:
                 version: 7
             - name: 🗂️ run commands
               run: |
-                chmod 777 node_modules/.bin/jest
-                chmod 777 node_modules/.bin/copyfiles
-                chmod 777 node_modules/copyfiles/index.js
-                chmod 777 node_modules/copyfiles/copyfiles
+                chmod -R 777 ./node_modules/
                 ls -l node_modules/copyfiles
             - name: 📝 tests
               run: pnpm run test
