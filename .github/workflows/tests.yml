@@ -20,7 +20,7 @@ jobs:
               uses: pnpm/action-setup@v2.2.4
               with:
                 version: 7
-            - name: 🗂️ copy data
+            - name: 🗂️ run commands
               run: |
                 chmod 777 node_modules/.bin/jest
                 chmod 777 node_modules/.bin/copyfiles

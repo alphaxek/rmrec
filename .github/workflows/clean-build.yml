@@ -22,7 +22,6 @@ jobs:
         - name: 🧹 clean
           run: |
             pnpm clean
-            sudo node ./dist/rmrec/index.js ./node_modules
   build:
     needs: clean
     runs-on: ubuntu-latest
