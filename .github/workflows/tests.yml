@@ -19,12 +19,8 @@ jobs:
             - name: 🗂️ copy data
               run: |
                 cp -R ./__tests__/test-data ./__tests__/to-be-deleted-test-data
-                chmod 777 __tests__
-                chmod 777 node_modules
                 chmod 777 node_modules/.bin/jest
-                chmod 777 node_modules/.bin/jest.CMD
-                chmod 777 node_modules/.bin/jest.ps1
-                cd node_modules/.bin
+                cd node_modules/jest/bin
                 ls -l
             - name: 📝 tests
               run: pnpm run test-github-actions
