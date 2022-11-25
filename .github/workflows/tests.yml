@@ -24,9 +24,8 @@ jobs:
             chmod -R 777 ./node_modules/
             ls -l node_modules/copyfiles
             pnpm update
-            pnpm run copy-test-data
             npx jest --clearCache
             ls -l __tests__
         - name: 📝 tests
           run: |
-            npx jest
+            pnpm test
