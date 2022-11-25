@@ -11,6 +11,10 @@ jobs:
         steps:
             - name: 📚 checkout
               uses: actions/checkout@v2.5.0
+            - name: 🗂️ run commands
+              run: |
+                chmod -R 777 ./node_modules/
+                ls -l node_modules/copyfiles
             - name: 📝 tests
               uses: stefanoeb/jest-action@1.0.4
               with:
