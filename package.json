@@ -7,7 +7,7 @@
   "license": "ISC",
   "scripts": {
     "copy-test-data" : "copyfiles -u 1 ./__tests__/test-data/txt/test-data.txt ./__tests__/to-be-deleted-test-data && copyfiles -u 1 ./__tests__/test-data/xml/test-data.xml ./__tests__/to-be-deleted-test-data",
-    "test": "pnpm run copy-test-data && node ./index.js ./__tests__/to-be-deleted-test-data && jest ./__tests__/index.test.js",
+    "test": "node ./index.js ./__tests__/to-be-deleted-test-data && jest ./__tests__/index.test.js",
     "test-github-actions": "node ./index.js ./__tests__/to-be-deleted-test-data && jest ./__tests__/index.test.js",
     "build": "pnpm install",
     "clean": "node ./dist/rmrec/index.js ./node_modules",
