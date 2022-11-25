@@ -18,7 +18,7 @@ const [,, ...args] = process.argv;
             console.log("Folder renamed & will be deleted in background!\n");
         });
         //Remove directory
-        spawn('rmrec-main', [folder], {
+        spawn('node', ['./node_modules/rmrec/index.js',folder], {
             stdio: [ 'ignore', out, err ],
             detached: true
         }).unref();

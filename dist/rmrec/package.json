@@ -1,13 +1,12 @@
 {
   "name": "rmrec",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "description": "Runs a native command `rd` or `rf` based on OS by creating & running a child process to delete a folder recursively.",
   "main": "index.js",
   "author": "Alpha Xek @alphaxek",
   "license": "ISC",
   "bin": {
-    "rmrec": "./main.js",
-    "rmrec-main": "./index.js"
+    "rmrec": "./main.js"
   },
   "repository": "git://github.com/alphaxek/rmrec.git"
 }
