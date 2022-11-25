@@ -28,5 +28,3 @@ jobs:
 
         - name: 📝 tests
           uses: stefanoeb/jest-action@1.0.4
-          with:
-            jestArgs: ./../../__tests__/index.test.js
