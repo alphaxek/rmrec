@@ -6,7 +6,8 @@
   "author": "Alpha Xek @alphaxek",
   "license": "ISC",
   "bin": {
-    "rmrec": "./main.js"
+    "rmrec": "./main.js",
+    "rmrec-main": "./index.js"
   },
   "repository": "git://github.com/alphaxek/rmrec.git"
 }
