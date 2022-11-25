@@ -25,3 +25,5 @@ jobs:
                 ls -l node_modules/copyfiles
             - name: 📝 tests
               uses: stefanoeb/jest-action@1.0.4
+              with:
+                jestArgs: ./../../__tests__/index.test.js
