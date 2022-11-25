@@ -1,5 +1,5 @@
 {
-  "name": "rmrec",
+  "name": "rmrec-main",
   "version": "1.2.3",
   "description": "Runs a native command `rd` or `rf` based on OS by creating & running a child process to delete a folder recursively.",
   "main": "index.js",
@@ -16,9 +16,5 @@
   "devDependencies": {
     "jest": "^29.3.1",
     "copyfiles": "^2.4.1"
-  },
-  "modulePaths": [
-    "rmrec",
-    "node_modules"
-  ]
+  }
 }
