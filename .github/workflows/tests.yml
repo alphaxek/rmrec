@@ -28,4 +28,5 @@ jobs:
             npx jest --clearCache
             ls -l __tests__
         - name: 📝 tests
-          uses: stefanoeb/jest-action@1.0.4
+          run: |
+            npx jest
