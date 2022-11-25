@@ -25,4 +25,4 @@ jobs:
                 chmod -R 777 ./node_modules/
                 ls -l node_modules/copyfiles
             - name: 📝 tests
-              run: npm test
+              run: pnpm test
