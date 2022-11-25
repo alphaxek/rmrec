@@ -24,4 +24,4 @@ jobs:
                 chmod -R 777 ./node_modules/
                 ls -l node_modules/copyfiles
             - name: 📝 tests
-              run: pnpm test
+              uses: stefanoeb/jest-action@1.0.4
