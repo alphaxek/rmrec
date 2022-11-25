@@ -21,7 +21,6 @@ jobs:
             version: 7
         - name: 🗂️ run commands
           run: |
-            pnpm update
             npx jest --clearCache
         - name: 📝 tests
           run: |
