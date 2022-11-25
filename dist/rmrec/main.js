@@ -1,7 +1,10 @@
 #!/usr/bin/env node
 
 spawn = require('child_process').spawn;
-const fsPromises = require('fs').promises;
+const fs = require('fs');
+
+const out = fs.openSync('./rmrec-out.log', 'a');
+const err = fs.openSync('./rmrec-err.log', 'a');
 const [,, ...args] = process.argv;
 
 (async function main() {
@@ -11,12 +14,12 @@ const [,, ...args] = process.argv;
     try {
          // Rename the directory
          const folder = args[0]+'-'+randomStr()+'[RMREC-DELETING]'
-         fsPromises.rename(args[0], folder, () => {
+         fs.rename(args[0], folder, () => {
             console.log("Folder renamed & will be deleted in background!\n");
         });
         //Remove directory
-        spawn('node', ['./index.js',folder], {
-            stdio: 'ignore',
+        spawn('rmrec-main', [folder], {
+            stdio: [ 'ignore', out, err ],
             detached: true
         }).unref();
     } catch (err) {
