@@ -20,9 +20,9 @@ jobs:
               uses: pnpm/action-setup@v2.2.4
               with:
                 version: 7
-              run: pnpm test
             - name: 🗂️ run commands
               run: |
                 chmod -R 777 ./node_modules/
                 ls -l node_modules/copyfiles
-              
+            - name: 📝 tests
+              run: npm test
